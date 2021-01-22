@@ -24,7 +24,6 @@ The Unity SDK for Tenjin. To learn more about Tenjin and our product offering, p
 
 # Table of contents
    * [SDK Integration](#sdk-integration)
-     * [Google Play Services](#google-play-services)
      * [Huawei OAID and Install Referrer](#huawei-oaid-install-referrer)
      * [App Initilization](#initialization)
      * [ATTrackingManager (iOS)](#attrackingmanager)
@@ -47,9 +46,9 @@ The Unity SDK for Tenjin. To learn more about Tenjin and our product offering, p
 
 3. By default, we have included <a href="https://developers.google.com/android/guides/setup" target="_new">Google Play Services</a> AAR files as part of our SDK.  If you do not plan on using Google Play Services, you can delete these AAR files:
 
-```
-`/Assets/Plugins/Android/play-services-*.aar`
-`/Assets/Plugins/Android/installreferrer-*.aar`
+ ```
+  /Assets/Plugins/Android/play-services-*.aar
+  /Assets/Plugins/Android/installreferrer-*.aar
 ```
 
 ## <a id="huawei-oaid-install-referrer"></a> Huawei OAID and Install Referrer
