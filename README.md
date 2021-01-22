@@ -3,17 +3,17 @@
 The Unity SDK for Tenjin. To learn more about Tenjin and our product offering, please visit https://www.tenjin.com.
 
 * Please see our <a href="https://github.com/tenjin/tenjin-unity-sdk/blob/master/RELEASE_NOTES.md" target="_new">Release Notes</a> to see detailed version history of changes.
-* Tenjin Unity SDK supports both iOS and Android..
+* Tenjin Unity SDK supports both iOS and Android.
 * Review the [iOS](https://github.com/tenjin/tenjin-ios-sdk) and [Android](https://github.com/tenjin/tenjin-android-sdk) documentation and apply the proper platform settings to your builds.
 * For any issues or support, please contact: support@tenjin.com
 * iOS Notes:
-  1. Xcode 12 is required if using Unity iOS SDK v1.12.0 and higher.
-  2. When building iOS, confirm that these frameworks were automatically added to the Xcode build.  If any are missing, you will need to add them manually.
+  * Xcode 12 is required if using Unity iOS SDK v1.12.0 and higher.
+  * When building iOS, confirm that these frameworks were automatically added to the Xcode build.  If any are missing, you will need to add them manually.
       * AdSupport.framework
       * AppTrackingTransparency.framework
       * iAd.framework
       * StoreKit.framework
-  3. For AppTrackingTransparency, be sure update your project `.plist` file and add `Privacy - Tracking Usage Description` <a href="https://developer.apple.com/documentation/bundleresources/information_property_list/nsusertrackingusagedescription" target="_new">(NSUserTrackingUsageDescription)</a> along with the text message you want to display to users.
+  * For AppTrackingTransparency, be sure update your project `.plist` file and add `Privacy - Tracking Usage Description` <a href="https://developer.apple.com/documentation/bundleresources/information_property_list/nsusertrackingusagedescription" target="_new">(NSUserTrackingUsageDescription)</a> along with the text message you want to display to users.
 
 * Android Notes:
   1. If you have another SDK installed which already has Google Play Services installed or uses [PlayServicesResolver](https://github.com/googlesamples/unity-jar-resolver), you may need to delete duplicate libraries: 
