@@ -20,11 +20,12 @@ The Unity SDK for Tenjin. To learn more about Tenjin and our product offering, p
     ```
      /Assets/Plugins/Android/play-services-ads-identifier--*.aar
      /Assets/Plugins/Android/play-services-basement---*.aar
-     /Assets/Plugins/Android/play-services-ads-identifier--*.aar
     ```
 
 # Table of contents
    * [SDK Integration](#sdk-integration)
+     * [Google Play Services](#google-play-services)
+     * [Huawei OAID and Install Referrer](#huawei-oaid-install-referrer)
      * [App Initilization](#initialization)
      * [ATTrackingManager (iOS)](#attrackingmanager)
      * [SKAdNetwork and Conversion Value](#skadnetwork-cv)
@@ -41,12 +42,26 @@ The Unity SDK for Tenjin. To learn more about Tenjin and our product offering, p
 # <a id="sdk-integration"></a> SDK Integration
 
 1. Download the latest Unity SDK from <a href="https://github.com/tenjin/tenjin-unity-sdk/releases" target="_new">here.</a>
+
 2. Import the `TenjinUnityPackage.unitypackage` into your project: `Assets -> Import Package`.
+
+3. By default, we have included <a href="https://developers.google.com/android/guides/setup" target="_new">Google Play Services</a> AAR files as part of our SDK.  If you do not plan on using Google Play Services, you can delete these AAR files:
+
+```
+`/Assets/Plugins/Android/play-services-*.aar`
+`/Assets/Plugins/Android/installreferrer-*.aar`
+```
+
+## <a id="huawei-oaid-install-referrer"></a> Huawei OAID and Install Referrer
+
+If you are marketing your app with Ad Networks that require `OAID`, add the Huawei OAID and Install Referrer libraries to your project by downloading these Huawei AAR files: <a href="https://github.com/tenjin/tenjin-unity-sdk/tree/huawei/Huawei" target="_new">https://github.com/tenjin/tenjin-unity-sdk/tree/huawei/Huawei</a>
+
+and placing them in your project's directory: `/Assets/Plugins/Android`
 
 ## <a id="initialization"></a> App Initialization
 
 1. Get your `<API_KEY>` from your <a href="https://www.tenjin.io/dashboard/docs" target="_new">Tenjin dashboard</a>.
-3. In your project's first `Start()` method add the following line of code.  Also add to `OnApplicationPause()` if you want to send sessions data when a user resumes using the app from the background.
+2. In your project's first `Start()` method add the following line of code.  Also add to `OnApplicationPause()` if you want to send sessions data when a user resumes using the app from the background.
 
 ```csharp
 using UnityEngine;
