@@ -26,6 +26,7 @@ The Unity SDK for Tenjin. To learn more about Tenjin and our product offering, p
    * [SDK Integration](#sdk-integration)
      * [Huawei OAID and Install Referrer](#huawei-oaid-install-referrer)
      * [App Initilization](#initialization)
+     * [App Store](#app-store)
      * [ATTrackingManager (iOS)](#attrackingmanager)
      * [SKAdNetwork and Conversion Value](#skadnetwork-cv)
      * [GDPR](#gdpr)
@@ -57,6 +58,14 @@ If you are marketing your app with Ad Networks that require `OAID`, add the Huaw
 
 and placing them in your project's directory: `/Assets/Plugins/Android`
 
+Set your App Store value to `huawei`:
+
+```csharp
+BaseTenjin instance = Tenjin.getInstance("<API_KEY>");
+
+instance.SetAppStoreType(AppStoreType.huawei);
+```
+
 ## <a id="initialization"></a> App Initialization
 
 1. Get your `<API_KEY>` from your <a href="https://www.tenjin.io/dashboard/docs" target="_new">Tenjin dashboard</a>.
@@ -86,6 +95,19 @@ public class TenjinExampleScript : MonoBehaviour {
   }
 }
 ```
+
+## <a id="app-store"></a> App Store
+By default, <a href="https://play.google.com/" target="_new">Google Play</a> is the default App Store. If you are publishing in a different App Store, update to the appropriate `TenjinSDK.AppStoreType.*` value:
+
+```csharp
+BaseTenjin instance = Tenjin.getInstance("<API_KEY>");
+
+instance.SetAppStoreType(AppStoreType.{{SET_APP_STORE_TYPE_VALUE}});
+```
+Current `AppStoreType` options:
+- `googleplay`
+- `amazon`
+- `huawei`
 
 ## <a id="attrackingmanager"></a> ATTrackingManager (iOS)
 
